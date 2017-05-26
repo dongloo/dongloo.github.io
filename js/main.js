@@ -623,6 +623,8 @@ $(window).resize(function () {
 //--WINDOW RESIZE FUNCTION END
 
 
+(function ($) {
+
     jQuery(window).scroll(function () {
         // =========== STICKY MENU ==========
         var posScroll = jQuery(window).scrollTop();
