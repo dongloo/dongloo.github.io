@@ -3400,3 +3400,18 @@ input.date, input.datetime {
     margin-bottom: 15px;
 
 }
+.rs-link:hover, .rs-link:focus {
+    background: #b0e908;
+}
+.rs-link {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background: #9c0;
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+    z-index: 9999999;
+    transition: all .3s;
+}
