@@ -1,9 +1,5 @@
-/*!
- * Responsive Switch 0.9.1 | @danielfilzhut | MIT/GPL2 Licensed
- */
-
 var responsiveSwitch = (function() {
-	
+
 	// Screen configuration
 	var responsiveSwitchBreakpoint	= parseInt(window.responsiveSwitchBreakpoint) || 1024;
 
