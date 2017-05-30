@@ -1,5 +1,45 @@
 //--DOCUMENT READY FUNCTION BEGIN
 $(document).ready(function () {
+
+    // images grid list
+    function display_collections_grid() {
+        jQuery("#collections_grid").addClass("active");
+        jQuery("#collections_list").removeClass("active");
+        // jQuery(".image_thumbnail").addClass("thumbnail");
+        // jQuery(".manager_images").addClass("grid");
+        // jQuery(".manager_images").removeClass("list");
+        // fit_img();
+        localStorage.setItem('display_image', 'collections_grid');
+        alert("collections_grid");
+        $("meta[name=viewport]").attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+    }
+    function display_collections_list() {
+        jQuery("#collections_grid").removeClass("active");
+        jQuery("#collections_list").addClass("active");
+        // jQuery(".image_thumbnail").removeClass("thumbnail");
+        // jQuery(".manager_images").removeClass("grid");
+        // jQuery(".manager_images").addClass("list");
+        localStorage.setItem('display_image', 'collections_list');
+        alert("collections_list");
+        $("meta[name=viewport]").attr('content', 'width=1200');
+    }
+    jQuery("#collections_grid").click(function () {
+        display_collections_grid();
+    });
+    jQuery("#collections_list").click(function () {
+        display_collections_list();
+    });
+    if (localStorage.getItem('display_image') == 'collections_grid') {
+        display_collections_grid();
+    } else {
+        display_collections_list();
+    }
+
+
+
+
+
+
     $(".adv_search_btn a").click(function () {
         if($(".adv_search_form").is(":visible")){
             $(".adv_search_form").slideUp(300);

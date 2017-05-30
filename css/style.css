@@ -3415,3 +3415,12 @@ input.date, input.datetime {
     z-index: 9999999;
     transition: all .3s;
 }
+
+.options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.display_image button.active {
+    color: #9c0 !important;
+}
