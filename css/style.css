@@ -3416,7 +3416,7 @@ input.date, input.datetime {
     transition: all .3s;
 }
 
-.options {
+.toggle_desktop_mobile_group {
     position: fixed;
     bottom: 10px;
     left: 10px;
