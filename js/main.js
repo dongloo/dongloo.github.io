@@ -1,44 +1,6 @@
 //--DOCUMENT READY FUNCTION BEGIN
 $(document).ready(function () {
 
-    // images grid list
-    function display_desktop() {
-        jQuery("#view_desktop").addClass("active");
-        jQuery("#view_mobile").removeClass("active");
-        // jQuery(".image_thumbnail").addClass("thumbnail");
-        // jQuery(".manager_images").addClass("grid");
-        // jQuery(".manager_images").removeClass("list");
-        // fit_img();
-        localStorage.setItem('toggle_desktop_mobile', 'desktop');
-        $("meta[name=viewport]").attr('content', 'width=1200');
-        
-    }
-    function display_mobile() {
-        jQuery("#view_desktop").removeClass("active");
-        jQuery("#view_mobile").addClass("active");
-        // jQuery(".image_thumbnail").removeClass("thumbnail");
-        // jQuery(".manager_images").removeClass("grid");
-        // jQuery(".manager_images").addClass("list");
-        localStorage.setItem('toggle_desktop_mobile', 'mobile');
-        $("meta[name=viewport]").attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
-    }
-    jQuery("#view_desktop").click(function () {
-        display_desktop();
-    });
-    jQuery("#view_mobile").click(function () {
-        display_mobile();
-    });
-    if (localStorage.getItem('toggle_desktop_mobile') == 'desktop') {
-        display_desktop();
-    } else {
-        display_mobile();
-    }
-
-
-
-
-
-
     $(".adv_search_btn a").click(function () {
         if($(".adv_search_form").is(":visible")){
             $(".adv_search_form").slideUp(300);
