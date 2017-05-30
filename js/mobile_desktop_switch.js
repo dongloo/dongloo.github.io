@@ -6,6 +6,7 @@ $(document).ready(function () {
         jQuery("#view_mobile").removeClass("hidden");
         localStorage.setItem('toggle_desktop_mobile', 'desktop');
         $("meta[name=viewport]").attr('content', 'width=1200');
+        location.reload();
         
     }
     function display_mobile() {
@@ -16,6 +17,7 @@ $(document).ready(function () {
         jQuery("#view_mobile").addClass("hidden");
         localStorage.setItem('toggle_desktop_mobile', 'mobile');
         $("meta[name=viewport]").attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+        location.reload();
     }
     jQuery("#view_desktop").click(function () {
         display_desktop();
