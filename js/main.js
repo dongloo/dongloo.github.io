@@ -10,7 +10,6 @@ $(document).ready(function () {
         // jQuery(".manager_images").removeClass("list");
         // fit_img();
         localStorage.setItem('display_image', 'collections_grid');
-        alert("collections_grid");
         $("meta[name=viewport]").attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
     }
     function display_collections_list() {
@@ -20,7 +19,6 @@ $(document).ready(function () {
         // jQuery(".manager_images").removeClass("grid");
         // jQuery(".manager_images").addClass("list");
         localStorage.setItem('display_image', 'collections_list');
-        alert("collections_list");
         $("meta[name=viewport]").attr('content', 'width=1200');
     }
     jQuery("#collections_grid").click(function () {
