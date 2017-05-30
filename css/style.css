@@ -3418,9 +3418,13 @@ input.date, input.datetime {
 
 .options {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999;
 }
-.display_image button.active {
+.toggle_desktop_mobile button.active {
     color: #9c0 !important;
+}
+.toggle_desktop_mobile button {
+    padding: 10px 15px;
 }
