@@ -5,7 +5,7 @@ $(document).ready(function () {
         jQuery("#view_mobile").removeClass("active");
         jQuery("#view_mobile").removeClass("hidden");
         localStorage.setItem('toggle_desktop_mobile', 'desktop');
-        $("meta[name=viewport]").attr('content', 'width=1200');
+        $("meta[name=viewport]").attr('content', 'width=1024');
         
     }
     function display_mobile() {
