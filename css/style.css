@@ -3428,7 +3428,7 @@ input.date, input.datetime {
 .toggle_desktop_mobile button {
     padding: 10px 15px;
 }
-@media(min-width: 1025px){
+@media(min-width: 1024px){
    .toggle_desktop_mobile{
     display: none;
    } 
