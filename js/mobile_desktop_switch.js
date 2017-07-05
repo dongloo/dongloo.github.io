@@ -5,12 +5,7 @@ $(document).ready(function () {
         jQuery("#view_mobile").removeClass("active");
         jQuery("#view_mobile").removeClass("hidden");
         localStorage.setItem('toggle_desktop_mobile', 'desktop');
-        $("meta[name=viewport]").attr('content', 'width=1200');
-        if($(window).width()<1024){
-            alert("show_btn");
-            $(".toggle_desktop_mobile").show();
-            // $(".toggle_desktop_mobile").css("display","block");
-        }
+        $("meta[name=viewport]").attr('content', 'width=1024');
         
     }
     function display_mobile() {
