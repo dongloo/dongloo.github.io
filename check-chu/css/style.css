@@ -1,7 +1,3 @@
-/*No nedd Css*/
-.pad30{
-  padding: 30px;
-}
 
 /*usePaging Css*/
 .usePaging_page {
@@ -104,7 +100,7 @@
 }
 .txt_check_item .txt_info .txt_vi {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 25px;
     margin: 5px 0;
     line-height: 1.4;
 }
@@ -113,9 +109,10 @@
     color: #8BC34A;
     margin: 5px 0;
     line-height: 1.4;
+    display: none;
 }
 .txt_check_item {
-    margin: 15px 0;
+    margin: 30px 0;
 }
 .txt_btn {
     margin: 10px 0;
@@ -123,4 +120,53 @@
 .noti_span{
     margin-top: 5px;
     font-size: 12px;
+}
+.txt_check_items {
+    width: 380px;
+    margin: 0 auto;
+}
+.txt_check_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    justify-content: center;
+    border-radius: 5px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+body {
+    background: #f2f2f2;
+}
+.txt_btn .check_result {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;    
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.txt_btn .check_result:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+
+.txt_check_item .txt_info .txt_taidam.active {
+    display: block;
 }

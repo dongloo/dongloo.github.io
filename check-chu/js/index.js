@@ -57,23 +57,27 @@
 		e.preventDefault();
 		var input = $(this).parents(".txt_check_item").find(".txt_input_item");
 		var txt_taidam = $(this).parents(".txt_check_item").find(".txt_taidam").text();
-
 		input.find(".noti_span").remove();
-
+		var total = input.length;
+		var count = 0;
 	    input.each(function(index){
 	    	var index = $(this).index();
 	    	var txt = txt_taidam.charAt(index);
-	    	
-			$(this).find(".form-control").after('<span class="noti_span text-center">'+txt+'</span>');
-
+			//$(this).find(".form-control").after('<span class="noti_span text-center">'+txt+'</span>');
 	    	if($(this).find(".form-control").val()==txt){
 				$(this).find(".form-control").css("color","#8BC34A");
 				$(this).find(".form-control").css("border-color","#8BC34A");
 				$(this).find(".form-control").after('<span class="noti_span text-center" style="color:#8BC34A">Đúng</span>');
+				count ++;
 	    	}else{
 				$(this).find(".form-control").css("color","#F44336");
 				$(this).find(".form-control").css("border-color","#F44336");
 				$(this).find(".form-control").after('<span class="noti_span text-center" style="color:#F44336">Sai</span>');
 	    	}
 	    });
+	    if(count==total){
+			$(this).parents(".txt_check_item").find(".txt_taidam").addClass("active");
+	    }else{
+			$(this).parents(".txt_check_item").find(".txt_taidam").removeClass("active");
+	    }
 	});
