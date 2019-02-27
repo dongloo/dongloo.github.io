@@ -1,0 +1,126 @@
+/*No nedd Css*/
+.pad30{
+  padding: 30px;
+}
+
+/*usePaging Css*/
+.usePaging_page {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.usePaging_btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.usePaging_btns a {
+    border: 1px solid #ddd;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 3px;
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.usePaging_btns a.active {
+    background-color: #57b5e3;
+    border-color: #57b5e3;
+    color: #fff;
+}
+.usePaging_btns a:hover {
+    color: #57b5e3;
+    border-color: #57b5e3;
+}
+.usePaging_btns a.active:hover {
+  color: #fff;
+}
+.usePaging tbody tr:not(.current_page) {
+    display: none;
+}
+
+.usePaging_btns .next_prev_btns.no_act {
+    background: #fbfbfb;
+    color: #999;
+    pointer-events: none;
+}
+.usePaging_info,
+.usePaging_info *,
+.usePaging_btns .next_prev_btns {
+    user-select: none;
+}
+
+
+
+/*CHECK TEXT*/
+@font-face {
+    font-family: "Taydam";
+    src: url("https://minhkidong.github.io/chu-thai/fonts/NotoSerif-TaiViet.ttf");
+    font-weight: normal;
+}
+.txt_taidam, .txt_input_item, .txt_input_item input{
+    font-family: 'Taydam', sans-serif !important;
+}
+.txt_check_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt_check_item .txt_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt_check_item .txt_input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.txt_check_item .txt_input .txt_input_item {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt_check_item .txt_input .txt_input_item .form-control {
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    padding: 0;
+    line-height: 48px;
+    border-radius: 3px;
+    border-color: #ddd;
+}
+.txt_check_item .txt_info .txt_vi {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+.txt_check_item .txt_info .txt_taidam {
+    font-size: 30px;
+    color: #8BC34A;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+.txt_check_item {
+    margin: 15px 0;
+}
+.txt_btn {
+    margin: 10px 0;
+}
+.noti_span{
+    margin-top: 5px;
+    font-size: 12px;
+}
