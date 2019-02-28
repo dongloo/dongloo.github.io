@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <title>Table auto Paging</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container pad30">
+        <div class="txt_check_filter">
+            <label for="browsers_txt_taidam">Tìm kiếm chữ</label>
+            <div class="txt_check_filter_content">
+                <input id="browsers_txt_taidam" name="browsers_txt_taidam" />
+                <button type="button" class="txt_clear_input">Xóa lựa chọn</button>
+            </div>
+        </div>
         <div class="txt_check_container"> 
             <div class="txt_check_items">    
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nơi" data-id="1">
                     <div class="txt_info">
                         <div class="txt_vi">Nơi</div>
                         <div class="txt_taidam">ꪚꪮ꪿ꪙ</div>
@@ -35,27 +43,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
-                    <div class="txt_info">
-                        <div class="txt_vi">Mẹ</div>
-                        <div class="txt_taidam">꫃ꪯꪣ</div>
-                    </div>
-                    <div class="txt_input">
-                        <div class="txt_input_item">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="txt_input_item">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="txt_input_item">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="txt_btn">
-                        <a href="#" class="check_result btn btn-info">Kiểm tra</a>
-                    </div>
-                </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Trắng" data-id="2">
                     <div class="txt_info">
                         <div class="txt_vi">Trắng</div>
                         <div class="txt_taidam">ꪒꪮ꪿ꪙ</div>
@@ -78,7 +66,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nước" data-id="3">
                     <div class="txt_info">
                         <div class="txt_vi">Nước</div>
                         <div class="txt_taidam">ꪙꪾ꫁</div>
@@ -98,7 +86,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Cá" data-id="4">
                     <div class="txt_info">
                         <div class="txt_vi">Cá</div>
                         <div class="txt_taidam">ꪜꪱ</div>
@@ -115,7 +103,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Bố" data-id="5">
                     <div class="txt_info">
                         <div class="txt_vi">Bố</div>
                         <div class="txt_taidam">ꪮꪱꪥ꫁</div>
@@ -138,7 +126,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Ông nội" data-id="6">
                     <div class="txt_info">
                         <div class="txt_vi">Ông nội</div>
                         <div class="txt_taidam">ꪜꪴ꪿</div>
@@ -158,7 +146,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nhà" data-id="7">
                     <div class="txt_info">
                         <div class="txt_vi">Nhà</div>
                         <div class="txt_taidam">ꪹꪭꪙ</div>
@@ -178,7 +166,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Trồng" data-id="8">
                     <div class="txt_info">
                         <div class="txt_vi">Trồng</div>
                         <div class="txt_taidam">ꪜꪴꪀ</div>
@@ -198,7 +186,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Cây" data-id="9">
                     <div class="txt_info">
                         <div class="txt_vi">Cây</div>
                         <div class="txt_taidam">ꪀꪷ</div>
@@ -215,7 +203,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Tết" data-id="10">
                     <div class="txt_info">
                         <div class="txt_vi">Tết</div>
                         <div class="txt_taidam">ꪊꪉꪸ</div>
@@ -235,7 +223,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Thịt" data-id="11">
                     <div class="txt_info">
                         <div class="txt_vi">Thịt</div>
                         <div class="txt_taidam">ꪹꪐ꪿</div>
@@ -255,7 +243,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Xanh" data-id="12">
                     <div class="txt_info">
                         <div class="txt_vi">Xanh</div>
                         <div class="txt_taidam">ꪵꪄꪫ</div>
@@ -275,7 +263,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Của" data-id="13">
                     <div class="txt_info">
                         <div class="txt_vi">Của</div>
                         <div class="txt_taidam">ꪄꪮꪉ</div>
@@ -295,7 +283,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Ngày" data-id="14">
                     <div class="txt_info">
                         <div class="txt_vi">Ngày</div>
                         <div class="txt_taidam">ꪣꪳ꫁</div>
@@ -315,7 +303,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Lợn" data-id="15">
                     <div class="txt_info">
                         <div class="txt_vi">Lợn</div>
                         <div class="txt_taidam">ꪢꪴ</div>
@@ -332,7 +320,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Tròn" data-id="16">
                     <div class="txt_info">
                         <div class="txt_vi">Tròn</div>
                         <div class="txt_taidam">ꪶꪣꪙ</div>
@@ -352,7 +340,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Uống" data-id="17">
                     <div class="txt_info">
                         <div class="txt_vi">Uống</div>
                         <div class="txt_taidam">ꪀꪙꪲ</div>
@@ -372,7 +360,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Ném" data-id="18">
                     <div class="txt_info">
                         <div class="txt_vi">Ném</div>
                         <div class="txt_taidam">ꪕꪮꪒ</div>
@@ -392,7 +380,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nương" data-id="19">
                     <div class="txt_info">
                         <div class="txt_vi">Nương</div>
                         <div class="txt_taidam">ꪼꪭ꪿</div>
@@ -412,7 +400,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Gà" data-id="20">
                     <div class="txt_info">
                         <div class="txt_vi">Gà</div>
                         <div class="txt_taidam">ꪼꪀ꪿</div>
@@ -432,7 +420,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nấu" data-id="21">
                     <div class="txt_info">
                         <div class="txt_vi">Nấu</div>
                         <div class="txt_taidam">ꪹꪥꪸꪒ</div>
@@ -455,7 +443,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Cao" data-id="22">
                     <div class="txt_info">
                         <div class="txt_vi">Cao</div>
                         <div class="txt_taidam">ꪎꪴꪉ</div>
@@ -475,7 +463,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="(con) Trâu" data-id="23">
                     <div class="txt_info">
                         <div class="txt_vi">(con) Trâu</div>
                         <div class="txt_taidam">ꪁꪫꪱꪥ</div>
@@ -498,7 +486,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Tưới" data-id="24">
                     <div class="txt_info">
                         <div class="txt_vi">Tưới</div>
                         <div class="txt_taidam">ꪠꪱ</div>
@@ -515,7 +503,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Nhỏ" data-id="25">
                     <div class="txt_info">
                         <div class="txt_vi">Nhỏ</div>
                         <div class="txt_taidam">ꪙꪮ꫁ꪥ</div>
@@ -538,7 +526,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Núi" data-id="26">
                     <div class="txt_info">
                         <div class="txt_vi">Núi</div>
                         <div class="txt_taidam">ꪝꪴ</div>
@@ -555,7 +543,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Lá" data-id="27">
                     <div class="txt_info">
                         <div class="txt_vi">Lá</div>
                         <div class="txt_taidam">ꪻꪚ</div>
@@ -572,7 +560,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Lạnh" data-id="28">
                     <div class="txt_info">
                         <div class="txt_vi">Lạnh</div>
                         <div class="txt_taidam">ꪘꪱꪫ</div>
@@ -592,7 +580,7 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
-                <div class="txt_check_item">
+                <div class="txt_check_item" data-txt="Chữ" data-id="29">
                     <div class="txt_info">
                         <div class="txt_vi">Chữ</div>
                         <div class="txt_taidam">ꪎꪳ.</div>
@@ -612,10 +600,31 @@
                         <a href="#" class="check_result btn btn-info">Kiểm tra</a>
                     </div>
                 </div>
+                <div class="txt_check_item" data-txt="Mẹ" data-id="30">
+                    <div class="txt_info">
+                        <div class="txt_vi">Mẹ</div>
+                        <div class="txt_taidam">꫃ꪯꪣ</div>
+                    </div>
+                    <div class="txt_input">
+                        <div class="txt_input_item">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="txt_input_item">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="txt_input_item">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="txt_btn">
+                        <a href="#" class="check_result btn btn-info">Kiểm tra</a>
+                    </div>
+                </div>                
             </div>
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
     <script  src="js/index.js"></script>
 </body>
 

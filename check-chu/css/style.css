@@ -165,8 +165,84 @@ body {
     background-color: #138496;
     border-color: #117a8b;
 }
-
-
 .txt_check_item .txt_info .txt_taidam.active {
     display: block;
+}
+/*UPDATE*/
+.txt_check_item {
+    display: none;
+}
+.txt_check_item.active{
+    display: flex;
+}
+.txt_check_filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+.txt_check_filter #browsers_txt_taidam {
+    display: inline-block;
+    width: auto;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.txt_check_filter #browsers_txt_taidam:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.txt_check_filter .txt_clear_input {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    /* color: #fff; */
+    /* background-color: #17a2b8; */
+    /* border-color: #17a2b8; */
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.txt_check_filter .txt_clear_input:hover {
+    color: #F44336;
+    background-color: #fff;
+    border-color: #F44336;
+}
+.txt_check_filter_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt_check_filter_content > * {
+    margin: 5px;
+}
+.txt_check_filter label {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.txt_check_filter .txt_clear_input {
+    cursor: pointer;
 }
