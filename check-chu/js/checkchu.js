@@ -1415,7 +1415,7 @@ jQuery(window).bind("load", function () {
 	    ul.hide();
 	    li.hide();
 	    input.val(text);
-	    console.log(id);
+	    jQuery(document).find('.txt_check_item').removeClass("active");
 	    jQuery(document).find('.txt_check_item[data-id="'+id+'"]').addClass("active");
 	});	  
 });

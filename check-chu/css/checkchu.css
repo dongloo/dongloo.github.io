@@ -67,11 +67,11 @@
 
 
 /*CHECK TEXT*/
-@font-face {
+/*@font-face {
     font-family: "Taydam";
-    src: url("../fonts/NotoSerif-TaiViet.ttf");
+    src: url("https://minhkidong.github.io/chu-thai/fonts/NotoSerif-TaiViet.ttf");
     font-weight: normal;
-}
+}*/
 .txt_taidam, .txt_input_item, .txt_input_item input{
     font-family: 'Taydam', sans-serif !important;
 }
@@ -188,6 +188,7 @@ body {
     transform: translateZ(0);
     position: relative;
     text-transform: uppercase;
+    color: #fff;
 }
 .txt_btn .check_result:before{
     content: "";
@@ -332,7 +333,7 @@ body {
 }
 .txt_check_filter label {
     color: #f6903d;
-    font-family: "bali",sans-serif;
+    font-family: "bali",sans-serif !important;
     font-size: 35px;
     margin: 0;
     padding-bottom: 25px;
@@ -340,6 +341,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom center;
     margin-bottom: 15px;
+    font-weight: normal !important;
 }
 .txt_check_filter .txt_clear_input {
     cursor: pointer;
@@ -372,6 +374,7 @@ body {
 .search_pr .search_list .search_list_item {
     padding: 5px 15px;
     cursor: pointer;
+    margin: 0;
 }
 
 .search_pr .search_list .search_list_item:not(:last-child) {
