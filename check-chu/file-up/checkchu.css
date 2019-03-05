@@ -262,7 +262,7 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 .txt_check_filter .txt_clear_input {
-    display: inline-block;
+    display: block;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
@@ -289,10 +289,10 @@ body {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;    
+    transition: all .25s ease-in-out;
     position: relative;
     -webkit-transform: translateZ(0);
-    transform: translateZ(0);    
+    transform: translateZ(0);
 }
 .txt_check_filter .txt_clear_input:before{
     content: "";
@@ -382,5 +382,15 @@ body {
 }
 .search_pr .search_list .search_list_item a {
     color: #00bbff;
+    display: block;
+}
+.search_pr + p {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.search_pr + p .txt_clear_input {
+    margin: 0 auto;
     display: block;
 }
