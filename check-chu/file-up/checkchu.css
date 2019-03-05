@@ -107,6 +107,7 @@
     line-height: 48px;
     border-radius: 3px;
     border-color: #ddd;
+    margin-bottom: 0;
 }
 .txt_check_item .txt_info .txt_vi {
     font-weight: 500;
