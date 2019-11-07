@@ -1,0 +1,132 @@
+.hct-table img {
+    max-width: 100%;
+    width: 100%;
+}
+.hct-table .w3 {
+    width: 300px;
+}
+.hct-table .w2 {
+    width: 200px;
+}
+
+.hct-table .w1 {
+    width: 70px;
+}
+.container.container-hct {
+    max-width: 900px;
+}
+.hct-table .wauto {width: auto;}
+
+.hct-table {
+	table-layout: fixed;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 40px;
+}
+.hct-table .pad-0 {
+    padding: 0;
+}
+.bg-hct {
+    background-color: #f8f9fe;
+    padding: 50px 0;
+}
+.hct-input {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 0;
+    margin-right: 5px;
+    border: 0;
+    border-bottom: 1px dashed #aaa;
+    background: transparent !important;
+}
+.hct-table small {
+    margin-left: 10px;
+}
+.hct-input-w2 {
+    width: 100px;
+}
+.hct-table .bcc_play_flex {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bcc_play_flex .bcc_play_audio2, .bcc_play_flex .bcc_play_video2 {
+    cursor: pointer;
+}
+.hct-table {
+    font-family: 'Taydam', sans-serif !important;
+}
+
+.bcc_play_flex .bcc_play_video2 {
+    font-size: 10px;
+    background: #FF9800;
+}
+
+
+.bcc_play_flex .bcc_play_audio2,.bcc_play_flex .bcc_play_video2 {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 9999px;
+    margin: 0 2px;
+    color: #fff;
+}
+
+.bcc_play_flex .bcc_play_video2 i {
+    padding-left: 2px;
+}
+
+.bcc_play_flex .bcc_play_audio2 {
+    font-size: 12px;
+    background: #8BC34A;
+}
+
+.bcc_play_flex .bcc_play_video2:hover {
+    background: #FFC107;
+}
+
+.bcc_play_flex .bcc_play_audio2:hover {
+    background: #CDDC39;
+}
+.hct-play-video,.hct-play-audio {
+    cursor: pointer;
+    font-size: 14px;
+}
+.hct-play-video {
+    color: #ff9800;
+}
+.hct-play-audio {
+    color: #8bc34a;
+}
+
+.hct-play-video:hover,.hct-play-audio:hover {
+    text-decoration: underline;
+}
+.hct-play-audio-items {
+    display: flex;
+}
+
+.hct-play-audio {
+    margin-left: 15px;
+}
+
+.bcc_play_flex .bcc_play_audio2 {
+    margin-right: 5px;
+}
+
+.bcc_play_flex .bcc_play_audio2, .bcc_play_flex .bcc_play_video2 {
+    margin-right: 5px;
+}

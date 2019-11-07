@@ -1,6 +1,10 @@
 
 
 jQuery(document).ready(function () {
+
+
+
+
 });
 
 
@@ -1316,7 +1320,7 @@ jQuery(window).bind("load", function () {
 	    li = ul.children("li");
 	    if (!filter) {
 	      ul.hide();
-	    } else {      
+	    } else {
 			for (i = 0; i < li.length; i++) {
 				a = li.eq(i).find("a");
 				if (a.html().toUpperCase().indexOf(filter) > -1) {
@@ -1352,7 +1356,7 @@ jQuery(window).bind("load", function () {
 			jQuery(document).find(".txt_check_items").append(html);
 			count++;
 		}
-		
+
 	}
 	show_block(available_Tags);
 	function show_input(target){
@@ -1372,7 +1376,7 @@ jQuery(window).bind("load", function () {
 	show_input(jQuery(document).find(".txt_check_items"));
 	jQuery(document).on("keyup","#browsers_txt_taidam",function() {
 		search_filter();
-	});	
+	});
 	jQuery(document).on('click', '.check_result', function(e){
 		e.preventDefault();
 		var input = jQuery(this).parents(".txt_check_item").find(".txt_input_item");
@@ -1417,8 +1421,175 @@ jQuery(window).bind("load", function () {
 	    input.val(text);
 	    jQuery(document).find('.txt_check_item').removeClass("active");
 	    jQuery(document).find('.txt_check_item[data-id="'+id+'"]').addClass("active");
-	});	  
+	});
+
+
+
+	function set_paging(target, page,perPage){
+		target.closest(".usePaging_parent").find('.usePaging_btns a').removeClass("active");
+		target.closest(".usePaging_parent").find('.usePaging_btns a[data_page="'+page+'"]').addClass("active");
+		target.closest(".usePaging_parent").find(".usePaging tbody tr").removeClass("current_page");
+		for(i=(page-1)*perPage;i<page*perPage;i++){
+			target.closest(".usePaging_parent").find(".usePaging tbody tr").eq(i).addClass("current_page");
+		}
+		var from_num = (page-1)*perPage+1;
+		var total_num = parseInt(target.closest(".usePaging_parent").find(".usePaging_info .total_num").html());
+		var to_num = page*perPage > total_num ? total_num : page*perPage;
+		target.closest(".usePaging_parent").find(".usePaging_info .from_num").html(from_num);
+		target.closest(".usePaging_parent").find(".usePaging_info .to_num").html(to_num);
+
+	}
+	function usePaging(){
+	    jQuery(".usePaging").each(function(){
+	    	if(!jQuery(this).hasClass("Paging_Inited")){
+	    		jQuery(this).addClass("Paging_Inited");
+	    		jQuery(this).wrapAll('<div class="usePaging_parent"></div>');
+	    		//Count page
+	    		var perPage = 10;
+	    		 jQuery(this).attr("data_perPage",perPage);
+	    		var trCount = jQuery(this).find("tbody").find("tr").length;
+	    		var TotalPage = Math.ceil(trCount / perPage);
+
+	    		var usePaging_btns = '';
+	    		for(i=0;i<TotalPage;i++){
+					usePaging_btns = usePaging_btns + '<a href="page_'+parseInt(i+1)+'" class="dataPage_number" data_page="'+parseInt(i+1)+'">'+parseInt(i+1)+'</a>';
+	    		}
+	    		var usePaging_info = '<div>Hiển thị <span class="from_num"></span> đến <span class="to_num"></span> trong tổng số <span class="total_num">'+trCount+'</span> hàng</div>';
+	    		var after = '<div class="usePaging_page">'+
+	    						'<div class="usePaging_info">'+usePaging_info+'</div>'+
+	    						'<div class="usePaging_btns">'+usePaging_btns+'</div>'+
+	    					'</div>';
+				jQuery(this).after(after);
+
+				var page = 1;
+				set_paging(jQuery(this),page,perPage);
+	    	}
+	    });
+	}
+	jQuery(document).on('click', '.dataPage_number', function(e){
+		e.preventDefault();
+	    var target = jQuery(this).closest(".usePaging_parent").find(".usePaging");
+	    var page = jQuery(this).attr("data_page");
+	    var perPage = target.attr("data_perPage");
+	    set_paging(target,page,perPage);
+	});
+
+    function set_paging2(target, page, perPage) {
+        target.closest(".usePaging2_parent").find('.usePaging2_btns a').removeClass("active");
+        target.closest(".usePaging2_parent").find('.usePaging2_btns a[data_page="' + page + '"]').addClass("active");
+        target.closest(".usePaging2_parent").find(".usePaging2_item").removeClass("current_page");
+        for (i = (page - 1) * perPage; i < page * perPage; i++) {
+            target.closest(".usePaging2_parent").find(".usePaging2_item").eq(i).addClass("current_page");
+        }
+        var from_num = (page - 1) * perPage + 1;
+        var total_num = parseInt(target.closest(".usePaging2_parent").find(".usePaging2_info .total_num").html());
+        var to_num = page * perPage > total_num ? total_num : page * perPage;
+        target.closest(".usePaging2_parent").find(".usePaging2_info .from_num").html(from_num);
+        target.closest(".usePaging2_parent").find(".usePaging2_info .to_num").html(to_num);
+    }
+    function usePaging2(){
+	    jQuery(".usePaging2").each(function() {
+	        if (!jQuery(this).hasClass("Paging_Inited")) {
+	            jQuery(this).addClass("Paging_Inited");
+	            jQuery(this).wrapAll('<div class="usePaging2_parent"></div>');
+	            //Count page
+	            var perPage = 1;
+	            jQuery(this).attr("data_perPage", perPage);
+	            var trCount = jQuery(this).find(".usePaging2_item").length;
+	            var TotalPage = Math.ceil(trCount / perPage);
+
+	            var usePaging2_btns = '';
+	            for (i = 0; i < TotalPage; i++) {
+	                usePaging2_btns = usePaging2_btns + '<a href="page_' + parseInt(i + 1) + '" class="dataPage_number2" data_page="' + parseInt(i + 1) + '">' + parseInt(i + 1) + '</a>';
+	            }
+	            var usePaging2_info = '<div>Hiển thị trang <span class="from_num"></span>/<span class="total_num">' + trCount + '</span></div>';
+	            var after = '<div class="usePaging2_page">' +
+	                '<div class="usePaging2_info">' + usePaging2_info + '</div>' +
+	                '<div class="usePaging2_btns">' + usePaging2_btns + '</div>' +
+	                '</div>';
+	            jQuery(this).after(after);
+
+	            var page = 1;
+	            set_paging2(jQuery(this), page, perPage);
+	        }
+	    });
+	}
+    jQuery(document).on('click', '.dataPage_number2', function(e) {
+        e.preventDefault();
+        var target = jQuery(this).closest(".usePaging2_parent").find(".usePaging2");
+        var page = jQuery(this).attr("data_page");
+        var perPage = target.attr("data_perPage");
+        set_paging2(target, page, perPage);
+    });
+
+	  jQuery.when(usePaging()).done(function () {
+		usePaging2();
+	  });
+	// usePaging().then(function() {
+	//   usePaging2();
+	// })
+
+
+	jQuery(document).find('[data-toggle="show_video"]').each(function(){
+		var video = jQuery(this).attr("data-video");
+		var audio = jQuery(this).attr("data-video").replace("mp4","mp3");
+		var id = jQuery(this).attr("data-video").replace(".mp4","");
+			id = id.replace("/","-");
+			id = id.replace("(","-");
+			id = id.replace(")","-");
+		video = 'http://hocchuthai.com/wp-content/themes/flatsome/assets/video/bang-chu-cai/'+video;
+		audio = 'http://hocchuthai.com/wp-content/themes/flatsome/assets/audio/bang-chu-cai/'+audio;
+		var html = '<div class="bcc_play_flex">'+
+						'<span class="bcc_play_video" data-play="'+video+'"><i class="fa fa-play" aria-hidden="true"></i></span>'+
+						'<span class="bcc_play_audio" data-play="pause"><i class="fa fa-volume-up" aria-hidden="true"></i></span>'+
+						'<audio id="'+id+'" preload="none" style="display:none">'+
+							'<source src="'+audio+'" type="audio/mpeg">'+
+						'</audio>'+
+					'</div>'
+		jQuery(this).append(html);
+	});
+	jQuery(document).on('click', '.bcc_play_video', function(){
+		var video = jQuery(this).attr("data-play");
+		var html= 	'<div class="show_video_section">'+
+					    '<div class="show_video_modal">'+
+					        '<div class="show_video_close"><i class="fa fa-times" aria-hidden="true"></i></div>'+
+							'<div class="show_video_content">'+
+								'<div class="show_video_content_parent">'+
+									'<video controls autoplay>'+
+									  '<source src="'+video+'" type="video/mp4">'+
+									'</video>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+						'<div class="show_video_overlay"></div>'+
+					'</div>';
+		jQuery("body").append(html);
+	});
+	jQuery(document).on('click', '.bcc_play_audio', function(){
+		var status = jQuery(this).attr("data-play");
+		var id = jQuery(this).parents(".bcc_play_flex").find('audio').attr("id");
+		var x = document.getElementById(id);
+
+		if(status=="pause"){
+			x.play();
+			jQuery(this).find("i").removeClass("fa-volume-up").addClass("fa-pause");
+			jQuery(this).attr("data-play","play");
+		}else{
+			x.pause();
+			jQuery(this).find("i").removeClass("fa-pause").addClass("fa-volume-up");
+			jQuery(this).attr("data-play","pause");
+		}
+
+		jQuery("#"+id).bind('ended', function(){
+			x.currentTime = 0;
+			jQuery(this).parents(".bcc_play_flex").find('.bcc_play_audio').attr("data-play","pause");
+		    jQuery(this).parents(".bcc_play_flex").find('.bcc_play_audio').find("i").removeClass("fa-pause").addClass("fa-volume-up");
+		});
+	});
+	jQuery(document).on('click', '.show_video_close', function(){
+	    jQuery(document).find(".show_video_section").remove();
+	});
 });
 
-jQuery(window).resize(function () { 
+jQuery(window).resize(function () {
 });

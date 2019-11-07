@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table auto Paging</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+    <link rel="stylesheet" href="css/checkchu.css">
+    <link rel="stylesheet" href="css/hct.css">
+    <!-- <link rel="stylesheet" href="http://chuthai.tk/wp-content/themes/flatsome/assets/css/checkchu.css"> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <!-- <script src="http://chuthai.tk/wp-content/themes/flatsome/assets/js/checkchu.js"></script> -->
+    <script src="js/checkchu.js"></script>
+    <script src="js/hct.js"></script>
+    <style type="text/css" media="screen">
+    </style>
+</head>
+
+<body>
+    <div class="bg-hct">
+        <div class="container container-hct">
+            <ul>
+                <li><strong>Nghe, đọc và tập viết từ mới (kết hợp sách; nghe audio, tập viết theo flash hướng dẫn trên Webside):</strong></li>
+            </ul>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Tôi.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪄ</strong></td>
+                        <td class="w1"><strong>ꪮ</strong></td>
+                        <td class="w1"><strong>꫁</strong></td>
+                        <td class="w1"><strong>ꪥ</strong></td>
+                        <td class="wauto"><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪄꪮ꫁ꪥ</strong></td>
+                        <td><strong>ꪄ</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>꫁ </strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪄꪮꪥ꫁ ꪼꪜ ꪎꪱꪫ ꪄꪮꪥ꫁</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪄ</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>꫁ </strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Tôi đi tìm tôi
+                            (Khỏi pày sáo khỏi)</td>
+                        <td><strong>Khỏi</strong></td>
+                        <td><strong>Tôi</strong></td>
+                        <td><strong>ꪄ</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>꫁ </strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Tôi.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-toi-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Tôi 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-toi-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Tôi 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-toi-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Tôi 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Bố.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪮ</strong></td>
+                        <td class="w1"><strong>ꪱ</strong></td>
+                        <td class="w1"><strong>ꪥ</strong></td>
+                        <td class="w1"><strong>꫁</strong></td>
+                        <td class="wauto"><strong>ꪮꪱꪥ꫁</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪮꪱꪥ꫁</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>꫁</strong></td>
+                        <td><strong>ꪮꪱꪥ꫁</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪮꪱꪥ꫁ ꪋꪳ꪿ ꫃ꪕꪉ ꫃ꪣꪒ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>꫁</strong></td>
+                        <td><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Bố là tất cả
+                            (Ải chư tễnh mết)</td>
+                        <td><strong>Ải </strong></td>
+                        <td><strong>Bố</strong></td>
+                        <td><strong>ꪮ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>꫁</strong></td>
+                        <td><strong>ꪄꪮ꫁ꪥ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Bố.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-bo-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bố 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-bo-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bố 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-bo-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bố 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Mẹ.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪹ</strong></td>
+                        <td class="w1"><strong>ꪯ</strong></td>
+                        <td class="w1"><strong>ꪸ</strong></td>
+                        <td class="w1"><strong> ꪣ</strong></td>
+                        <td class="wauto"><strong>ꪹꪯꪸꪣ</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪹꪯꪸꪣ</strong></td>
+                        <td><strong>ꪹ</strong></td>
+                        <td><strong>ꪯ</strong></td>
+                        <td><strong>ꪸ</strong></td>
+                        <td><strong> ꪣ</strong></td>
+                        <td><strong>ꪹꪯꪸꪣ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪩꪴꪀ </strong><strong></strong><strong>ꪭꪰꪀ ꫃ꪯꪣ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪹ</strong></td>
+                        <td><strong>ꪯ</strong></td>
+                        <td><strong>ꪸ</strong></td>
+                        <td><strong> ꪣ</strong></td>
+                        <td><strong>ꪹꪯꪸꪣ</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Con yêu mẹ
+                            (Lụk hặk ễm )</td>
+                        <td><strong>Ểm</strong></td>
+                        <td><strong>Mẹ</strong></td>
+                        <td><strong>ꪹ</strong></td>
+                        <td><strong>ꪯ</strong></td>
+                        <td><strong>ꪸ</strong></td>
+                        <td><strong> ꪣ</strong></td>
+                        <td><strong>ꪹꪯꪸꪣ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Mẹ.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-me-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Mẹ 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-me-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Mẹ 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-me-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Mẹ 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Con trai.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪩ </strong></td>
+                        <td class="w1"><strong>ꪴ </strong></td>
+                        <td class="w1"><strong>ꪀ</strong></td>
+                        <td class="wauto"><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪩꪴꪀ ꪋꪱꪥ</strong></td>
+                        <td><strong>ꪋ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪋꪱꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪩꪴꪀ ꪋꪱꪥ ꫃ꪯꪣ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪩ </strong></td>
+                        <td><strong>ꪴ </strong></td>
+                        <td><strong>ꪀ</strong></td>
+                        <td><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td>Con trai của mẹ
+                            (Lụk chãi ễm)</td>
+                        <td>lụk chãi</td>
+                        <td><strong>Con trai</strong></td>
+                        <td><strong>ꪋ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪋꪱꪥ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Con trai.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-con-trai-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con trai 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-con-trai-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con trai 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-con-trai-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con trai 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Con gái.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪩ </strong></td>
+                        <td class="w1"><strong>ꪴ </strong></td>
+                        <td class="w1"><strong>ꪀ</strong></td>
+                        <td class="wauto"><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪩꪴꪀ ꪑꪉꪲ</strong></td>
+                        <td><strong>ꪋ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪋꪱꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪩꪴꪀ ꪑꪉꪲ ꪭꪰꪀ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪩ </strong></td>
+                        <td><strong>ꪴ </strong></td>
+                        <td><strong>ꪀ</strong></td>
+                        <td><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td>Con gái yêu
+                            (Luk nhĩnh hặc )</td>
+                        <td>lụk nhĩnh</td>
+                        <td><strong>Con gái</strong></td>
+                        <td><strong>ꪋ</strong></td>
+                        <td><strong>ꪱ</strong></td>
+                        <td><strong>ꪥ</strong></td>
+                        <td><strong>ꪋꪱꪥ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Con gái.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-con-gai-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con gái 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-con-gai-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con gái 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-con-gai-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Con gái 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Conn.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪩ </strong></td>
+                        <td class="w1"><strong>ꪴ </strong></td>
+                        <td class="w1"><strong>ꪀ</strong></td>
+                        <td class="wauto"><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪩꪴꪀ </strong></td>
+                        <td><strong>ꪩ </strong></td>
+                        <td><strong>ꪴ </strong></td>
+                        <td><strong>ꪀ</strong></td>
+                        <td><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪩꪴꪀ </strong><strong>ꪼꪜ ꪵꪚ ꪂꪳ ꪨꪰꪀ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪩ </strong></td>
+                        <td><strong>ꪴ </strong></td>
+                        <td><strong>ꪀ</strong></td>
+                        <td><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                    <tr>
+                        <td>Con đi học xa
+                            (Luk pày ép xừ lăk )</td>
+                        <td>lụk</td>
+                        <td><strong>Con </strong></td>
+                        <td><strong>ꪩ </strong></td>
+                        <td><strong>ꪴ </strong></td>
+                        <td><strong>ꪀ</strong></td>
+                        <td><strong>ꪩꪴꪀ </strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Conn.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-conn-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Conn 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-conn-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Conn 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-conn-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Conn 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Ông.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1"><strong>ꪜ</strong></td>
+                        <td class="w1"><strong>ꪴ</strong></td>
+                        <td class="w1"><strong>꪿</strong></td>
+                        <td class="wauto"><strong> ꪜꪴ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong> ꪜꪴ꪿</strong></td>
+                        <td><strong>ꪜ</strong></td>
+                        <td><strong>ꪴ</strong></td>
+                        <td><strong>꪿</strong>
+                        </td>
+                        <td><strong> ꪜꪴ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪮꪱꪥ꫁ ꪜꪴ꪿ ꫄ꪛ ꪤꪴ꪿ ꪹꪭꪙ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td><strong>ꪜ</strong></td>
+                        <td><strong>ꪴ</strong></td>
+                        <td><strong>꪿</strong>
+                        </td>
+                        <td><strong> ꪜꪴ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Ông nội không ở nhà
+                            (Ải pú bỡ dú hưỡn)</td>
+                        <td>Pú</td>
+                        <td><strong>Ông Nội</strong></td>
+                        <td><strong>ꪜ</strong></td>
+                        <td><strong>ꪴ</strong></td>
+                        <td><strong>꪿</strong>
+                        </td>
+                        <td><strong> ꪜꪴ꪿</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Ông.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-ong-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Ông 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-ong-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Ông 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-ong-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Ông 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Chị gái.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1">ꪝ</td>
+                        <td class="w1">ꪲ</td>
+                        <td class="w1">꪿</td>
+                        <td class="wauto"><strong>ꪝꪲ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪝꪲ꪿ ꪑꪲꪉ</strong></td>
+                        <td>ꪑ</td>
+                        <td>ꪲ</td>
+                        <td>ꪉ</td>
+                        <td><strong>ꪑꪲꪉ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪝꪲ꪿ ꪑꪲꪉ </strong><strong>ꪼꪜ ꪹꪭꪙ ꪠꪺ</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td>ꪝ</td>
+                        <td>ꪲ</td>
+                        <td>꪿</td>
+                        <td><strong>ꪝꪲ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Chị gái về nhà chồng
+                            (Pi nhĩnh pày hưỡn phùa)
+                        </td>
+                        <td>Pi nhĩnh</td>
+                        <td><strong>Chị gái</strong></td>
+                        <td>ꪑ</td>
+                        <td>ꪲ</td>
+                        <td>ꪉ</td>
+                        <td><strong>ꪑꪲꪉ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Chị gái.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-chi-gai-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Chị gái 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-chi-gai-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Chị gái 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-chi-gai-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Chị gái 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Bà.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1">ꪥ</td>
+                        <td class="w1">ꪱ</td>
+                        <td class="w1">꪿</td>
+                        <td class="wauto"><strong>ꪥꪱ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪥꪱ꪿</strong></td>
+                        <td>ꪥ</td>
+                        <td>ꪱ</td>
+                        <td>꪿</td>
+                        <td><strong>ꪥꪱ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td>ꪥꪱ꪿ ꪨꪱꪙ ꪤꪮꪥ꫁ ꪭꪲꪉ꪿</td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td>ꪥ</td>
+                        <td>ꪱ</td>
+                        <td>꪿</td>
+                        <td><strong>ꪥꪱ꪿</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Bà nội cháu giỏi lắm!
+                            ( Gia làn giỏi hinh)
+                        </td>
+                        <td>Gia</td>
+                        <td><strong>Bà nội</strong></td>
+                        <td>ꪥ</td>
+                        <td>ꪱ</td>
+                        <td>꪿</td>
+                        <td><strong>ꪥꪱ꪿</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Bà.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-ba-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bà 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-ba-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bà 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-ba-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Bà 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="table table-bordered hct-table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="w3 pad-0"><img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/Anh.jpg" alt=""></td>
+                        <td colspan="2" class="w2"><strong class="text-danger">Cách viết</strong></td>
+                        <td class="w1">ꪯ</td>
+                        <td class="w1">ꪱ</td>
+                        <td class="w1">ꪥ</td>
+                        <td class="wauto"><strong>ꪯꪱꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ꪯꪱꪥ</strong></td>
+                        <td>ꪯ</td>
+                        <td>ꪱ</td>
+                        <td>ꪥ</td>
+                        <td><strong>ꪯꪱꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ꪯꪱꪥ ꪼꪜ ꪶꪚ꫁ ꪶꪓꪥ꫁</strong></td>
+                        <td><strong class="text-danger">Cách đọc</strong></td>
+                        <td><strong class="text-danger">Ý nghĩa</strong></td>
+                        <td>ꪯ</td>
+                        <td>ꪱ</td>
+                        <td>ꪥ</td>
+                        <td><strong>ꪯꪱꪥ</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Anh đi nhập ngũ
+                            ( Ãi pày bổ đội)
+                        </td>
+                        <td>Ãi</td>
+                        <td><strong>Anh</strong></td>
+                        <td>ꪯ</td>
+                        <td>ꪱ</td>
+                        <td>ꪥ</td>
+                        <td><strong>ꪯꪱꪥ</strong></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="bcc_play_flex">
+                                <div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/Anh.mp4">
+                                    <span class="bcc_play_video2">
+                                        <i class="fa fa-play" aria-hidden="true"></i>
+                                    </span>xem flash
+                                </div>
+                                <div class="hct-play-audio-items">
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe chậm
+                                        <audio id="hct-anh-1" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Anh 1.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe vừa
+                                        <audio id="hct-anh-2" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Anh 2.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                    <div class="hct-play-audio" data-play="pause">
+                                        <span class="bcc_play_audio2">
+                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                        </span>Nghe nhanh
+                                        <audio id="hct-anh-3" preload="none" style="display:none">
+                                            <source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/Anh 3.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
