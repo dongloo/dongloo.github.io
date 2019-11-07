@@ -64,9 +64,9 @@
 .bcc_play_flex .bcc_play_audio2, .bcc_play_flex .bcc_play_video2 {
     cursor: pointer;
 }
-.hct-table {
+/*.hct-table {
     font-family: 'Taydam', sans-serif !important;
-}
+}*/
 
 .bcc_play_flex .bcc_play_video2 {
     font-size: 10px;
