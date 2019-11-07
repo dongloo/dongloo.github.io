@@ -35,19 +35,27 @@
     background-color: #f8f9fe;
     padding: 50px 0;
 }
+.bg-hct .text-danger {
+    color: #dc3545!important;
+}
+
+.bg-hct .text-success {
+    color: #28a745!important;
+}
 .hct-input {
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    padding: 0;
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
     line-height: 36px;
     text-align: center;
     margin-left: 5px;
-    border-radius: 0;
+    border-radius: 0 !important;
     margin-right: 5px;
-    border: 0;
-    border-bottom: 1px dashed #aaa;
+    border: 0 !important;
+    border-bottom: 1px dashed #aaa !important;
     background: transparent !important;
+    box-shadow: none !important;
 }
 .hct-table small {
     margin-left: 10px;
