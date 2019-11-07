@@ -25,8 +25,11 @@
     background: #fff;
     margin-bottom: 40px;
 }
+.hct-table tr td {
+    padding: .75rem !important;
+}
 .hct-table .pad-0 {
-    padding: 0;
+    padding: 0 !important;
 }
 .bg-hct {
     background-color: #f8f9fe;
