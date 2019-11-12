@@ -1,7 +1,7 @@
-.bg-hct *:not(.fa) {
+/*.bg-hct *:not(.fa) {
     font-family: 'Taydam', sans-serif !important;
 }
-
+*/
 
 .hct-table img {
     max-width: 100%;
@@ -23,7 +23,7 @@
 .hct-table .wauto {width: auto;}
 
 .hct-table {
-	table-layout: fixed;
+    table-layout: fixed;
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
     border-radius: 10px;
     overflow: hidden;
