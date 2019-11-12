@@ -377,3 +377,11 @@
 .hct-fill-item i {
     display: none;
 }
+.opacity-down {
+    pointer-events: none;
+    opacity: .15;
+}
+
+.box-shadow, .row-box-shadow-2 .col-inner, .row-box-shadow-2-hover .col-inner:hover, .box-shadow-2, .box-shadow-2-hover:hover {
+    box-shadow: 0 1rem 2.5rem -1rem rgba(136, 152, 170, .45) !important;
+}
