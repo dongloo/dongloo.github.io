@@ -1,23 +1,3 @@
-jQuery(document).on('input', '.hct-input', function(){
-    var val = jQuery(this).val();
-    var pre = jQuery(this).attr('data-value');
-    if(val!=""){
-	    if(val==pre){
-	    	jQuery(this).parent().find('small').removeClass('text-danger');
-	    	jQuery(this).parent().find('small').addClass('text-success');
-	    	jQuery(this).parent().find('small').text('Đúng');
-	    }else{
-	    	jQuery(this).parent().find('small').addClass('text-danger');
-	    	jQuery(this).parent().find('small').removeClass('text-success');
-			jQuery(this).parent().find('small').text('Sai');
-	    }
-    }else{
-    	jQuery(this).parent().find('small').removeClass('text-danger');
-    	jQuery(this).parent().find('small').removeClass('text-success');
-		jQuery(this).parent().find('small').text('');
-    }
-});
-
 jQuery(document).on('click', '.hct-play-video', function(){
 	var video = jQuery(this).attr("data-play");
 	var html= 	'<div class="show_video_section">'+
@@ -126,4 +106,31 @@ jQuery(window).bind("load", function () {
 		hctID++;
 
     });
+    jQuery('.hct-fill-item').each(function(){
+    	jQuery(this).append('<small></small>');
+    	var txt = jQuery(this).find('i').text();
+    	var input = '<input class="form-control hct-input" data-value="'+txt+'" type="text">';
+    	jQuery(this).find('i').before(input);
+    	jQuery(this).find('i').remove();
+    });
+	jQuery(document).on('input', '.hct-input', function(){
+	    var val = jQuery(this).val();
+	    var pre = jQuery(this).attr('data-value');
+	    if(val!=""){
+		    if(val==pre){
+		    	jQuery(this).parent().find('small').removeClass('text-danger');
+		    	jQuery(this).parent().find('small').addClass('text-success');
+		    	jQuery(this).parent().find('small').text('Đúng');
+		    }else{
+		    	jQuery(this).parent().find('small').addClass('text-danger');
+		    	jQuery(this).parent().find('small').removeClass('text-success');
+				jQuery(this).parent().find('small').text('Sai');
+		    }
+	    }else{
+	    	jQuery(this).parent().find('small').removeClass('text-danger');
+	    	jQuery(this).parent().find('small').removeClass('text-success');
+			jQuery(this).parent().find('small').text('');
+	    }
+	});
+
 });
