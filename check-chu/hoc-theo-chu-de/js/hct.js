@@ -63,6 +63,7 @@ jQuery(window).bind("load", function () {
 	var hctID = 0;
     jQuery('.hct-item').each(function(){
     	var text = jQuery(this).attr('data-text');
+    	var url = jQuery(this).attr('data-path');
     	var sentence_thai = jQuery(this).attr('data-sentence-thai');
     	var sentence_viet = jQuery(this).attr('data-sentence-viet');
     	var write = jQuery(this).attr('data-write');
@@ -74,7 +75,7 @@ jQuery(window).bind("load", function () {
 			sString_html = sString_html + '<span>'+sString[i]+'</span>';
     	}
 		var html =  '<div class="hct-item-img">'+
-					    '<img src="https://minhkidong.github.io/chu-thai/hoc-theo-chu-de/jpg/'+text+'.jpg">'+
+					    '<img src="'+url+'/jpg/'+text+'.jpg">'+
 					'</div>'+
 					'<div class="hct-item-des">'+
 					    '<p>'+sentence_thai+'</p>'+
@@ -91,7 +92,7 @@ jQuery(window).bind("load", function () {
 					'<span class="hct-item-mean-content">'+mean+'</span>'+
 					'<div class="hct-item-all-sound">Âm thanh cả câu</div>'+
 					'<div class="hct-item-flash bcc_play_flex">'+
-					    '<div class="hct-play-video" data-play="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp4/'+text+'.mp4">'+
+					    '<div class="hct-play-video" data-play="'+url+'/mp4/'+text+'.mp4">'+
 					        '<span class="bcc_play_video2">'+
 					            '<i class="fa fa-play" aria-hidden="true"></i>'+
 					        '</span>xem flash'+
@@ -104,7 +105,7 @@ jQuery(window).bind("load", function () {
 					                '<i class="fa fa-volume-up" aria-hidden="true"></i>'+
 					            '</span>Nghe chậm'+
 					            '<audio id="hct-'+hctID+'-1" preload="none" style="display:none">'+
-					                '<source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/'+text+' 1.mp3" type="audio/mpeg">'+
+					                '<source src="'+url+'/mp3/'+text+' 1.mp3" type="audio/mpeg">'+
 					            '</audio>'+
 					        '</div>'+
 					    '</div>'+
@@ -116,7 +117,7 @@ jQuery(window).bind("load", function () {
 					                '<i class="fa fa-volume-up" aria-hidden="true"></i>'+
 					            '</span>Nghe nhanh'+
 					            '<audio id="hct-'+hctID+'-3" preload="none" style="display:none">'+
-					                '<source src="http://minhkidong.github.io/chu-thai/hoc-theo-chu-de/mp3/'+text+' 3.mp3" type="audio/mpeg">'+
+					                '<source src="'+url+'/mp3/'+text+' 3.mp3" type="audio/mpeg">'+
 					            '</audio>'+
 					        '</div>'+
 					    '</div>'+
