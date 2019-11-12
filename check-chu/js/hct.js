@@ -108,16 +108,34 @@ jQuery(window).bind("load", function () {
     });
     jQuery('.hct-fill-item').each(function(){
     	jQuery(this).append('<small></small>');
-    	var txt = jQuery(this).find('i').text();
-    	var input = '<input class="form-control hct-input" data-value="'+txt+'" type="text">';
-    	jQuery(this).find('i').before(input);
-    	jQuery(this).find('i').remove();
+    	jQuery(this).find('i').each(function(){
+	    	var txt = jQuery(this).text();
+	    	var input = '<input class="form-control hct-input" data-value="'+txt+'" type="text">';
+	    	jQuery(this).before(input);
+	    	jQuery(this).remove();
+    	});
     });
 	jQuery(document).on('input', '.hct-input', function(){
-	    var val = jQuery(this).val();
-	    var pre = jQuery(this).attr('data-value');
-	    if(val!=""){
-		    if(val==pre){
+	    var length = jQuery(this).parent().find('.hct-input').length;
+
+	    var done = 0;
+	    jQuery(this).parent().find('.hct-input').each(function(){
+			var input_val = jQuery(this).val();
+			if(input_val!=""){
+				done++;
+			}
+	    });
+
+	    if(done==length){
+	    	var ok = 0;
+		    jQuery(this).parent().find('.hct-input').each(function(){
+		    	var pre = jQuery(this).attr('data-value');
+				var val = jQuery(this).val();
+				if(val==pre){
+					ok++;
+				}
+		    });
+		    if(ok==length){
 		    	jQuery(this).parent().find('small').removeClass('text-danger');
 		    	jQuery(this).parent().find('small').addClass('text-success');
 		    	jQuery(this).parent().find('small').text('Đúng');
@@ -127,9 +145,15 @@ jQuery(window).bind("load", function () {
 				jQuery(this).parent().find('small').text('Sai');
 		    }
 	    }else{
-	    	jQuery(this).parent().find('small').removeClass('text-danger');
-	    	jQuery(this).parent().find('small').removeClass('text-success');
-			jQuery(this).parent().find('small').text('');
+	    	if(done!=0){
+		    	jQuery(this).parent().find('small').addClass('text-danger');
+		    	jQuery(this).parent().find('small').removeClass('text-success');
+				jQuery(this).parent().find('small').text('Bạn chưa điền hết');
+	    	}else{
+		    	jQuery(this).parent().find('small').removeClass('text-danger');
+		    	jQuery(this).parent().find('small').removeClass('text-success');
+				jQuery(this).parent().find('small').text('');
+	    	}
 	    }
 	});
 
