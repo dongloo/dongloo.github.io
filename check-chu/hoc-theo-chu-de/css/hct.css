@@ -404,3 +404,6 @@
         border-left: 0;
     }
 }
+body.logged-in #top-bar .flex-right .top-bar-nav {
+    display: none;
+}
