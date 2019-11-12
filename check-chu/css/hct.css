@@ -1,7 +1,7 @@
-/*.bg-hct *:not(.fa) {
+.bg-hct *:not(.fa) {
     font-family: 'Taydam', sans-serif !important;
 }
-*/
+
 
 .hct-table img {
     max-width: 100%;
