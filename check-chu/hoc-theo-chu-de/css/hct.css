@@ -412,3 +412,8 @@ body.logged-in #top-bar .flex-right .top-bar-nav {
     top: 0;
     left: 0;
 }
+@media(max-width: 850px){
+    .header-main {
+        display: block !important;
+    }
+}
