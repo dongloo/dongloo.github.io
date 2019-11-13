@@ -417,3 +417,24 @@ body.logged-in #top-bar .flex-right .top-bar-nav {
         display: block !important;
     }
 }
+.thongke-btn {
+    border-color: #FF5722 !important;
+    color: #FF5722 !important;
+    background: #ededed !important;
+}
+
+.thongke-btn:hover {
+    border-color: #FF9800 !important;
+    color: #fff !important;
+    background: #FF9800 !important;
+}
+
+.top-bar-nav * {
+    font-family: "Arial" ,sans-serif !important;
+}
+
+.top-bar-nav .button {
+    border-width: 1px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+}
