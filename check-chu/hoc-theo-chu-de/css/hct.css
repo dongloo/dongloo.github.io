@@ -407,3 +407,8 @@
 body.logged-in #top-bar .flex-right .top-bar-nav {
     display: none;
 }
+.hct-item-all-sound.bcc_play_flex {
+    position: relative;
+    top: 0;
+    left: 0;
+}

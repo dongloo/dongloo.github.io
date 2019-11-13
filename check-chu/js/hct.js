@@ -70,7 +70,18 @@ jQuery(window).bind("load", function () {
 					'<span class="hct-item-speak-content">'+speak+'</span>'+
 					'<span class="hct-item-mean">Ý nghĩa</span>'+
 					'<span class="hct-item-mean-content">'+mean+'</span>'+
-					'<div class="hct-item-all-sound">Âm thanh cả câu</div>'+
+					'<div class="hct-item-all-sound bcc_play_flex">'+
+					    '<div class="hct-play-audio-items">'+
+					        '<div class="hct-play-audio" data-play="pause">'+
+					            '<span class="bcc_play_audio2">'+
+					                '<i class="fa fa-volume-up" aria-hidden="true"></i>'+
+					            '</span>Âm thanh cả câu'+
+					            '<audio id="hct-'+hctID+'-full" preload="none" style="display:none">'+
+					                '<source src="'+url+'/mp3/'+text+' full.mp3" type="audio/mpeg">'+
+					            '</audio>'+
+					        '</div>'+
+					    '</div>'+
+					'</div>'+
 					'<div class="hct-item-flash bcc_play_flex">'+
 					    '<div class="hct-play-video" data-play="'+url+'/mp4/'+text+'.mp4">'+
 					        '<span class="bcc_play_video2">'+
