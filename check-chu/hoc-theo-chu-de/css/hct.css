@@ -426,7 +426,6 @@ body.logged-in #top-bar .flex-right .top-bar-nav {
 .thongke-btn:hover {
     border-color: #FF9800 !important;
     color: #fff !important;
-    background: #FF9800 !important;
 }
 
 .top-bar-nav * {
