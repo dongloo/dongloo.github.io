@@ -1020,126 +1020,6 @@ body .text-hover-main:hover{
 /*HERO BANNER*/
 
 /*footer*/
-footer {
-    background-color: #171717;
-}
-
-footer .widget-title {
-    font-weight: bold;
-    line-height: 1.24;
-    letter-spacing: 2.3px;
-    text-align: left;
-    margin-bottom: 15px;
-    color: #bdbdbd;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-footer .widget-menu>ul>li>a {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.25;
-    text-align: left;
-    color: var(--white-color);
-    display: block;
-    margin-bottom: 15px;
-    -webkit-transition: all .25s;
-    -moz-transition: all .25s;
-    -ms-transition: all .25s;
-    -o-transition: all .25s;
-    transition: all .25s;
-}
-
-footer .widget-menu>ul>li>a:hover {
-    color: #bdbdbd;
-}
-
-.footer-widget {
-    display: block;
-}
-
-.footer-widget .widget-menu {
-    padding: 0 15px;
-    width: 25%;
-    float: left;
-}
-
-.footer-widget .widget-menu>ul {
-    display: block;
-    padding-top: 15px;
-    padding-left: 15px;
-    position: relative;
-    float: left;
-    width: 100%;
-}
-
-.footer-widget .widget-menu>ul:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: #BDBDBD;
-    display: block;
-}
-
-.footer-widget {
-    margin: 120px 0 100px 0;
-    float: left;
-    width: 100%;
-}
-
-.footer-credit {
-    display: flex;
-    flex-direction: column;
-    float: left;
-    width: 100%;
-}
-
-footer {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-}
-
-.credit-img {
-    margin-bottom: 30px;
-}
-
-.credit-img img {
-    display: block;
-    margin: 0 auto;
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-}
-
-.credit-img img {
-    max-width: 352px;
-    max-height: 69px;
-    object-fit: contain;
-    object-position: center;
-}
-
-.footer-credit .copyright {
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 2.52;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-footer .widget-title>i {
-    display: none;
-}
-
-footer .widget-title {
-    pointer-events: none;
-}
 
 
 /*pagination*/
@@ -1919,4 +1799,102 @@ footer .widget-title {
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #bcc6d0;
+}
+
+
+
+.theme-footer {
+    background: #2d313c;
+}
+.theme-footer {
+    position: relative;
+    z-index: 1;
+}
+.theme-footer .inner-wrapper {
+    background: url(../images/bg4.png) no-repeat center center;
+}
+.theme-footer .top-footer-data-wrapper {
+    border-bottom: 1px solid rgba(49, 54, 67,1);
+    padding: 95px 0 60px;
+}
+.theme-footer .bottom-footer {
+    padding: 45px 0;
+}
+.theme-footer .bottom-footer .copyright {
+    float: left;
+    line-height: 34px;
+}
+.theme-footer .bottom-footer .copyright {
+    color: #fff;
+}
+.theme-footer .bottom-footer .copyright a,
+.theme-footer .top-footer-data-wrapper .footer-list ul li a:hover,
+.ft-link a:hover {
+    color: var(--main-color);
+}
+.theme-footer .bottom-footer ul {
+    float: right;
+}
+.theme-footer .bottom-footer ul li {
+    display: inline-block;
+}
+
+.theme-footer .bottom-footer ul li a.bg-facebook {
+    background: #1372cf;
+}
+.theme-footer .bottom-footer ul li a.bg-twitter {
+    background: #16baff;
+}
+.theme-footer .bottom-footer ul li a.bg-instagram {
+    background: #ef4140;
+}
+
+.theme-footer .bottom-footer ul li a {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 5px;
+    display: block;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.theme-footer .bottom-footer ul li a:hover{
+    -webkit-transform: scale(0.9);
+       -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+         -o-transform: scale(0.9);
+            transform: scale(0.9);
+}
+.ft-link{
+    line-height: 36px;
+    color: #fff;
+    display: block;
+}
+.ft-link a{
+    color: #fff;
+}
+
+.theme-footer .top-footer-data-wrapper .footer-list .title {
+    font-size: 24px;
+    padding-bottom: 28px;
+    color: #fff;
+}
+.theme-footer .top-footer-data-wrapper .footer-list ul li a {
+    line-height: 36px;
+    color: #fff;
+    display: block;
+}
+.footer-logo .logo {
+    margin-bottom: 26px !important;
+}
+
+.footer-logo .logo img {
+    max-height: 45px;
+    max-width: 210px;
 }

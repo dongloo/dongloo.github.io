@@ -17,7 +17,7 @@ function body_padding_top() {
 jQuery(document).ready(function() {
     //body_padding_top();
     account_clickable();
-
+    $('[data-toggle="tooltip"]').tooltip();
     //Menu dropdown if on mobile
     jQuery(document).on('click', '.account-info > a[data-clickable="true"]', function(e) {
         e.preventDefault();
