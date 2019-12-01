@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123.189" height="55.848" viewBox="0 0 123.189 55.848">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #83c024;
+      }
+    </style>
+  </defs>
+  <g id="send" transform="translate(0 -139.942)">
+    <g id="Group_3378" data-name="Group 3378" transform="translate(12.921 139.942)">
+      <g id="Group_3377" data-name="Group 3377">
+        <path id="Path_11005" data-name="Path 11005" class="cls-1" d="M161.518,139.942H82a2.454,2.454,0,0,0-2.454,2.454v4.628H56.158a2.454,2.454,0,0,0,0,4.908H79.547V183.8H65.568a2.454,2.454,0,0,0,0,4.908H79.547v4.628A2.454,2.454,0,0,0,82,195.79h79.517a2.454,2.454,0,0,0,2.454-2.454V142.4A2.454,2.454,0,0,0,161.518,139.942Zm-6.054,4.908-33.7,27.666L88.215,144.85Zm3.6,46.033H84.455V148.11L120.2,177.587a2.454,2.454,0,0,0,3.118,0l35.747-29.345Z" transform="translate(-53.704 -139.942)"/>
+      </g>
+    </g>
+    <g id="Group_3380" data-name="Group 3380" transform="translate(0 165.164)">
+      <g id="Group_3379" data-name="Group 3379">
+        <path id="Path_11006" data-name="Path 11006" class="cls-1" d="M28.794,244.768H2.454a2.454,2.454,0,1,0,0,4.908h26.34a2.454,2.454,0,1,0,0-4.908Z" transform="translate(0 -244.768)"/>
+      </g>
+    </g>
+    <g id="Group_3382" data-name="Group 3382" transform="translate(12.922 183.8)">
+      <g id="Group_3381" data-name="Group 3381" transform="translate(0 0)">
+        <path id="Path_11007" data-name="Path 11007" class="cls-1" d="M57.47,322.227H56.159a2.454,2.454,0,0,0,0,4.908H57.47a2.454,2.454,0,0,0,0-4.908Z" transform="translate(-53.705 -322.227)"/>
+      </g>
+    </g>
+  </g>
+</svg>

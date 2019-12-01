@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52.837" height="52.837" viewBox="0 0 52.837 52.837">
+  <defs>
+    <filter id="Rectangle_298" x="0" y="0" width="52.837" height="52.837" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="bh-checklist" transform="translate(10 7.578)">
+    <g transform="matrix(1, 0, 0, 1, -10, -7.58)" filter="url(#Rectangle_298)">
+      <rect id="Rectangle_298-2" data-name="Rectangle 298" width="28.837" height="28.837" rx="4" transform="translate(10 8)" fill="#f4f4f4"/>
+    </g>
+    <path id="Path_95" data-name="Path 95" d="M17956.5-22451.363l10.143,10.141,19.963-19.961" transform="translate(-17948.568 22461.184)" fill="none" stroke="#83c024" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

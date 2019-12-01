@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="add-pic" transform="translate(-918 -819.998)">
+    <g id="Rectangle_9644" data-name="Rectangle 9644" transform="translate(918 819.998)" fill="none" stroke="#aaa" stroke-width="1">
+      <rect width="30" height="30" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="none"/>
+    </g>
+    <g id="close" transform="translate(663.718 386.36) rotate(45)">
+      <rect id="Rectangle_145" data-name="Rectangle 145" width="13.192" height="1.583" transform="translate(503.72 121.601) rotate(45)" fill="#aaa"/>
+      <rect id="Rectangle_146" data-name="Rectangle 146" width="13.192" height="1.583" transform="translate(513.048 122.72) rotate(135)" fill="#aaa"/>
+    </g>
+  </g>
+</svg>
