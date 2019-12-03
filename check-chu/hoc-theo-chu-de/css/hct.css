@@ -479,3 +479,6 @@ aside#execphp-2 {
     margin-bottom: 0px;
     padding-top: 8px;
 }
+#slim_p1_11.postbox p:not(.header) {
+    padding-left: 15px;
+}
