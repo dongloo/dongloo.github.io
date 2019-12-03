@@ -15,6 +15,36 @@ function body_padding_top() {
 }
 //--DOCUMENT READY FUNCTION BEGIN
 jQuery(document).ready(function() {
+
+    function makeTimer() {
+
+        //      var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
+        var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
+        endTime = (Date.parse(endTime) / 1000);
+
+        var now = new Date();
+        now = (Date.parse(now) / 1000);
+
+        var timeLeft = endTime - now;
+
+        var days = Math.floor(timeLeft / 86400);
+        var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+        var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+        if (hours < "10") { hours = "0" + hours; }
+        if (minutes < "10") { minutes = "0" + minutes; }
+        if (seconds < "10") { seconds = "0" + seconds; }
+
+        $("#izone-days").html(days + "<span class='text-muted'>Ngày</span>");
+        $("#izone-hours").html(hours + "<span class='text-muted'>Giờ</span>");
+        $("#izone-minutes").html(minutes + "<span class='text-muted'>Phút</span>");
+        $("#izone-seconds").html(seconds + "<span class='text-muted'>Giây</span>");
+
+    }
+
+    setInterval(function() { makeTimer(); }, 1000);
+
     //body_padding_top();
     account_clickable();
     $('[data-toggle="tooltip"]').tooltip();
@@ -59,8 +89,8 @@ jQuery(document).ready(function() {
     //Home page car slider
     var home_slider_option = {
         nav: true,
-        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-        items:1,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        items: 1,
         autoplay: false,
         autoplayTimeout: 6000,
         autoplayHoverPause: false,
@@ -70,7 +100,7 @@ jQuery(document).ready(function() {
         //merge:true,
         //lazyLoad:true
     }
-    $(".home-slider").owlCarousel(home_slider_option);
+    $("#home-slider").owlCarousel(home_slider_option);
     // $(".owl-slider .slide_prev").click(function() {
     //     $(".owl-slider .horizontal_slider").trigger('prev.owl.carousel');
     //     return false;
@@ -79,19 +109,80 @@ jQuery(document).ready(function() {
     //     $(".owl-slider .horizontal_slider").trigger('next.owl.carousel');
     //     return false;
     // });
+    $("#gv-slider").owlCarousel({
+        nav: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        items: 3,
+        autoplay: false,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: false,
+        loop: true,
+        dots: true,
+        margin: 24,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            480: {
+                items: 2,
+            },
+            767: {
+                items: 2,
 
+            },
+            991: {
+                items: 3,
+
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+    $("#hs-slider").owlCarousel({
+        nav: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        autoplay: false,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: false,
+        loop: false,
+        dots: true,
+        margin: 24,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            480: {
+                items: 2,
+            },
+            767: {
+                items: 2,
+
+            },
+            991: {
+                items: 3,
+
+            },
+            1200: {
+                items: 3
+            },
+            1366: {
+                items: 4
+            }
+        }
+    });
 
     //Mobile menu new
-    function toogle_mobilenav(n){
-        if(n=='hide'){
-           jQuery('body').removeClass('mobilenav-show');
-        }else if(n=='show'){
+    function toogle_mobilenav(n) {
+        if (n == 'hide') {
             jQuery('body').removeClass('mobilenav-show');
-        }else{
+        } else if (n == 'show') {
+            jQuery('body').removeClass('mobilenav-show');
+        } else {
             jQuery('body').toggleClass('mobilenav-show');
         }
     }
-    jQuery('.mobilenav-toggle,.mobilenav-close').click(function(e){
+    jQuery('.mobilenav-toggle,.mobilenav-close').click(function(e) {
         e.preventDefault();
         toogle_mobilenav();
     });
@@ -106,17 +197,17 @@ jQuery(document).ready(function() {
             }
         }
     });
-    jQuery('.mobilenav-inner li').each(function(){
-        var svg =   '<svg width="53.418" height="100.75" viewBox="0 0 53.418 100.75">'+
-                        '<path d="M5.193,100.75H3.084A3.079,3.079,0,0,1,.856,95.542L41.94,52.5a3.084,3.084,0,0,0,0-4.254L.856,5.208A3.081,3.081,0,0,1,3.084,0H5.193A3.076,3.076,0,0,1,7.42.954L52.563,48.248a3.084,3.084,0,0,1,0,4.254L7.42,99.8A3.076,3.076,0,0,1,5.193,100.75Z" transform="translate(0.004 0)"/>'+
-                    '</svg>';
-        if(jQuery(this).children('ul').length != 0){
+    jQuery('.mobilenav-inner li').each(function() {
+        var svg = '<svg width="53.418" height="100.75" viewBox="0 0 53.418 100.75">' +
+            '<path d="M5.193,100.75H3.084A3.079,3.079,0,0,1,.856,95.542L41.94,52.5a3.084,3.084,0,0,0,0-4.254L.856,5.208A3.081,3.081,0,0,1,3.084,0H5.193A3.076,3.076,0,0,1,7.42.954L52.563,48.248a3.084,3.084,0,0,1,0,4.254L7.42,99.8A3.076,3.076,0,0,1,5.193,100.75Z" transform="translate(0.004 0)"/>' +
+            '</svg>';
+        if (jQuery(this).children('ul').length != 0) {
             jQuery(this).addClass('has-sub');
             jQuery(this).children('a').wrap('<div class="has-sub-toggle"></span>');
-            jQuery(this).children('.has-sub-toggle').append('<span class="toggle-mobilenav-sub">'+svg+'</span>');
+            jQuery(this).children('.has-sub-toggle').append('<span class="toggle-mobilenav-sub">' + svg + '</span>');
         }
     });
-    jQuery(document).on('click', '.toggle-mobilenav-sub', function(){
+    jQuery(document).on('click', '.toggle-mobilenav-sub', function() {
         jQuery(this).toggleClass('active');
         jQuery(this).closest('.has-sub').children('ul').slideToggle();
     });
