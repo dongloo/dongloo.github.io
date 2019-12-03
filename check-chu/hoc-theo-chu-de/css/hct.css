@@ -466,7 +466,6 @@ aside#execphp-2 {
 #slim_p1_2793 .execphpwidget ul li.active {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
     color: #8BC34A;
     align-items: center;
     background: rgba(139, 195, 74, .075);
