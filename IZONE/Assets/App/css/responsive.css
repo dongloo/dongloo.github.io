@@ -35,6 +35,9 @@
     .account-info:hover .account-menu { top: calc(100% + 2px); visibility: visible; opacity: 1; z-index: 27; }
 }
 @media(max-width:991px) {
+    .hs-slider-section .owl-prev, .hs-slider-section .owl-next {
+        top: 110px !important;
+    }
     .header-center .menu {
         display: none;
     }
@@ -68,7 +71,9 @@
 
 }
 @media(max-width:767px) {
-
+    .hs-slider-section .owl-prev, .hs-slider-section .owl-next {
+        top: 90px !important;
+    }
 }
 @media(max-width:640px) {
     .col-study-step .heading {
@@ -103,6 +108,9 @@
     }
     .col-botro {
         grid-template-columns: 1fr;
+    }
+    .hs-slider-section .owl-prev, .hs-slider-section .owl-next {
+        top: 110px !important;
     }
 }
 @media(min-width:421px) {

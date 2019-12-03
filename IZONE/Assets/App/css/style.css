@@ -2662,6 +2662,7 @@ body .col-botro li a:hover span{
     font-size: 40px;
     text-align: center;
     font-weight: bold;
+    flex-wrap: wrap;
 }
 #izone-timer {
     display: flex;
@@ -2696,4 +2697,7 @@ body .col-botro li a:hover span{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.hs-slider-section .owl-prev, .hs-slider-section .owl-next {
+    top: 90px !important;
 }
