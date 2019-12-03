@@ -420,12 +420,12 @@ body.logged-in #top-bar .flex-right .top-bar-nav {
 .thongke-btn {
     border-color: #FF5722 !important;
     color: #FF5722 !important;
+    background: #ededed !important;
 }
 
 .thongke-btn:hover {
     border-color: #FF9800 !important;
     color: #fff !important;
-    background: #FF9800 !important;
 }
 
 .top-bar-nav * {
@@ -436,4 +436,48 @@ body.logged-in #top-bar .flex-right .top-bar-nav {
     border-width: 1px !important;
     height: 30px !important;
     line-height: 30px !important;
+}
+.phuam_menu .txt_check_filter p {
+    font-size: 14px;
+}
+[id*=slim_p].postbox .inside .hct-input {
+    display: none;
+}
+
+[id*=slim_p].postbox p:not(.header) {
+    padding-left: 70px;
+}
+aside#execphp-2 {
+    display: none;
+}
+.inside aside#execphp-2 {
+    display: block;
+}
+#slim_p1_2793 {
+    margin-bottom: 0;
+}
+
+#slim_p1_2793 .inside {
+    max-height: 500px;
+    height: 100%;
+}
+
+
+#slim_p1_2793 .execphpwidget ul li.active {
+    display: flex;
+    justify-content: space-between;
+    color: #8BC34A;
+    align-items: center;
+    background: rgba(139, 195, 74, .075);
+    border-bottom: 1px solid rgba(139, 195, 74, .25);
+}
+
+#slim_p1_2793 .execphpwidget ul li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    padding-top: 8px;
+}
+#slim_p1_11.postbox p:not(.header) {
+    padding-left: 15px;
 }

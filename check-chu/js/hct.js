@@ -168,4 +168,28 @@ jQuery(window).bind("load", function () {
 	    }
 	});
 
+
+	if(jQuery('#slim_p1_11').length!=0){
+		var user_visits =[];
+		jQuery('#slim_p1_11 .slimstat-tooltip-trigger').each(function(){
+			var txt = jQuery(this).text();
+			var usernam = txt.split(' ')[0];
+			var count = txt.split(' ')[1];
+			user_visits.push({
+				usernam: usernam,
+				count: count
+			});
+		});
+		for(var i =0; i < user_visits.length;i++){
+			jQuery('#slim_p1_2793 .execphpwidget ul li').each(function(){
+				var txt = jQuery(this).text();
+				if(txt == user_visits[i].usernam){
+					jQuery(this).addClass('active');
+					jQuery(this).append('<span class="li_count">'+user_visits[i].count+'</span>');
+				}
+			});
+		}
+	}
+
+
 });
