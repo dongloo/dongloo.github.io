@@ -2662,13 +2662,13 @@ body .col-botro li a:hover span{
     font-size: 40px;
     text-align: center;
     font-weight: bold;
-    flex-wrap: wrap;
 }
 #izone-timer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
 }
 #izone-timer span {
     display: block;
