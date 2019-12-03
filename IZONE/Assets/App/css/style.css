@@ -2412,11 +2412,11 @@ ul.menu-step {
     margin-bottom: 0;
 }
 ul.menu-step h2 {
-    background: #fff;
-    font-size: 16px;
-    font-weight: 300;
-    padding: 8px 16px;
+    padding: 16px 16px 8px 16px;
     margin: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
 }
 .txt-blue {
     color: #00A8AB;
