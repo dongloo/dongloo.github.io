@@ -19,7 +19,8 @@ jQuery(document).ready(function() {
     function makeTimer() {
 
         //      var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
-        var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
+        var endTimeValue = jQuery("#izone-timer").attr('data-endtime');
+        var endTime = new Date(endTimeValue);
         endTime = (Date.parse(endTime) / 1000);
 
         var now = new Date();
