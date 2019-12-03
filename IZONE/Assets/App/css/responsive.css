@@ -87,11 +87,22 @@
 }
 @media (min-width:576px) {
 }
+@media (max-width:575px) {
+    .gv-slider .owl-nav .owl-next {
+        right: 0;
+    }
+    .gv-slider .owl-nav .owl-prev {
+        left: 0;
+    }
+}
 @media(max-width:530px) {
 }
 @media(max-width:480px) {
     .hot-promotion-home .head-msg .content {
         padding: 30px 1px 0 115px;
+    }
+    .col-botro {
+        grid-template-columns: 1fr;
     }
 }
 @media(min-width:421px) {

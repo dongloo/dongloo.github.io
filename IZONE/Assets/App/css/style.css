@@ -2047,7 +2047,7 @@ body .text-hover-main:hover{
 .cta-one__text {
   font-size: 20px;
   color: #666E82;
-  line-height: 40px;
+  /*line-height: 40px;*/
   margin: 0;
 }
 .cta-one__list {
@@ -2057,7 +2057,7 @@ body .text-hover-main:hover{
   margin-top: 30px;
 }
 .cta-one__list-item {
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
   padding-left: 30px;
 }
@@ -2682,4 +2682,18 @@ body .col-botro li a:hover span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.btn-outline-danger {
+    border: 1px solid #f5365c;
+}
+.list_hot_post li .frame {
+    position: relative;
+}
+.list_hot_post li .frame a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
