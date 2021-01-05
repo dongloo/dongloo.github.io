@@ -4,4 +4,4 @@
 
 [![Twitter: minhkidong](https://img.shields.io/twitter/follow/minhkidong?style=social)](https://twitter.com/minhkidong)
 [![GitHub minhkidong](https://img.shields.io/github/followers/minhkidong?label=follow&style=social)](https://github.com/minhkidong)
-
+![](https://komarev.com/ghpvc/?username=minhkidong&color=green)
