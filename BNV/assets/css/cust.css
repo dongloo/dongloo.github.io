@@ -1,0 +1,122 @@
+.navbar .navbar-brand small img {
+    object-fit: contain;
+    object-position: left center;
+}
+#header {
+    background: url(../img/header-partten.jpg) repeat-x top left;
+    z-index: 2;
+    position: relative;    
+}
+#header_bg {
+    margin: 0 auto;
+    width: 1200px;
+    height: 150px;
+    background: url(../img/header-bg.jpg) no-repeat top left;
+}
+@media (min-width: 1200px){
+    .container {
+        /*width: 1020px;
+        margin: 0 auto;
+        position: relative;*/
+    }   
+}
+#header a#link_home {
+    display: block;
+    height: 180px;
+}
+.display-mobile, .show-mobile {
+    display: none !important;
+}
+@media handheld, only screen and (max-width: 600px){
+    .visible-mobile {
+        display: none !important;
+    }
+    #header a.logo {
+        display: block;
+    }
+    .display-mobile, .show-mobile {
+        display: block !important;
+    }    
+}
+@media only screen and (max-width: 480px){  
+    .visible-mobile {
+        display: none !important;
+    }
+}
+.navbar .navbar-inner{
+    background: linear-gradient(to bottom, #972b20 , #631c13);    
+}
+.navbar {
+    margin-top: -1px;
+}
+.table>thead>tr>th {
+    vertical-align: middle;
+}
+
+.stt_totrinh {
+    margin: 0;
+}
+
+.stt_totrinh > li {
+    float: left;
+    margin-right: 10px;
+}
+
+.stt_totrinh > li > a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #eee;
+    color: #444;
+    clear: both;
+    border-radius: 50%;
+    background: #fff;    
+}
+
+.stt_totrinh > li:last-child {
+    margin-right: 0;
+}
+
+.stt_totrinh > li.active > a {
+    background: #9c0;
+    border-color: #9c0;
+    color: #fff;
+}
+
+.atcBtns_totrinh {
+    margin: 0;
+}
+
+.atcBtns_totrinh > li {
+    float: left;
+    margin-right: 10px;
+}
+
+.atcBtns_totrinh > li:last-child {
+    margin-right: 0;
+}
+
+.atcBtns_totrinh > li > a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #eee;
+    clear: both;
+    border-radius: 50%;
+    background: #fff;
+}
+.atcBtns_totrinh > li > a.text-danger {
+    background: #dd0000;
+    border-color: #dd0000;
+    color: #fff;
+}
+
+.atcBtns_totrinh > li > a.text-info {
+    background: #57b5e3;
+    border-color: #57b5e3;
+    color: #fff;
+}
